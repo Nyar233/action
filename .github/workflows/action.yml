@@ -4,18 +4,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Installation depends
-      uses: actions/setup-go@v3
+      - name: Installation depends
+        uses: actions/setup-go@v3
         with:
-          go-version: '1.18'
-    - name: build
-      run: |
-        cd ~/
-        xcaddy build master --with github.com/caddyserver/forwardproxy@caddy2
-    - name : Upload artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: caddy
-        path: ~/
+          go-version: '>=1.17.0'
+      - name: build
+        run: |
+          cd ~/
+          xcaddy build master --with github.com/caddyserver/forwardproxy@caddy2
+      - name : Upload artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: caddy
+          path: ~/
 
     
