@@ -1,4 +1,4 @@
-name: Build OpenWrt
+name: Build caddy-with-forwardproxy
 on: push
 jobs:
   build:
