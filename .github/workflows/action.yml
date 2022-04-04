@@ -19,6 +19,6 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: caddy
-          path: ~/
+          path: ~/caddy
 
     
